@@ -1,46 +1,126 @@
-# Getting Started with Create React App
+# 📊 Custom Report Service
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **full-stack application** designed for generating interactive dashboards, exporting PDF reports, scheduling automated report delivery, and managing flexible, widget-based layouts for custom business use cases.
 
-## Available Scripts
+## 🚀 Key Features
 
-In the project directory, you can run:
+  * ✔ **Full-stack Project:** Built using **React**, **Node.js**, and **TypeScript**.
+  * ✔ **Report Generation:** Ability to generate and export **PDF reports**.
+  * ✔ **Automation:** Schedule automated **email reports** using cron expressions.
+  * ✔ **Dashboard Builder:** Custom dashboard interface with drag-and-drop **widgets**.
+  * ✔ **Backend API:** Dedicated API routes for all report data and services.
+  * ✔ **Architecture:** Modular backend with distinct layers (services, routes, models).
+  * ✔ **Scheduling:** Supports **cron-based** scheduling for time-based tasks.
+  * ✔ **Extensibility:** Easily extendable to support new report types and data sources.
 
-### `npm start`
+-----
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🧰 Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Component | Technologies Used |
+| :--- | :--- |
+| **Frontend** | **React**, **TypeScript**, Custom Hooks, CSS |
+| **Backend** | **Node.js**, **Express**, **TypeScript** |
+| **Services** | PDF export service, Cron / Scheduler service |
 
-### `npm test`
+-----
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Folder Structure
 
-### `npm run build`
+```
+custom-report-service/
+│
+├── backend/                  # Backend server (Node + TypeScript)
+│   ├── src/                  # Source files
+│   │   ├── models/           # DB/Data models
+│   │   ├── routes/           # API routes
+│   │   ├── services/         # PDF, Email, Scheduler services
+│   │   └── server.ts         # Express server entry point
+│   │
+│   ├── dist/                 # Transpiled JavaScript files
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── .env                  # Environment variables (ignored)
+│
+├── src/                      # Frontend (React)
+│   ├── components/           # UI components (Dashboard, Sidebar, etc.)
+│   ├── hooks/                # Reusable logic hooks
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── index.css
+│
+├── public/                   # Static files
+│   └── employees.json        # Example data
+│
+├── package.json              # Frontend package config
+├── tsconfig.json
+├── .gitignore
+└── README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-----
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1️⃣ Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/Thathaji9/custom-report-service.git
+cd custom-report-service
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 🖥️ Backend Setup
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Step | Command | Details |
+| :--- | :--- | :--- |
+| **2️⃣ Install Deps** | `cd backend` then `npm install` | Install Node.js dependencies. |
+| **3️⃣ Build & Run** | `npm run build` then `npm start` | Transpile TypeScript and start the Express server. |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> **Backend runs at: `http://localhost:4000`**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 🎨 Frontend Setup
 
-## Learn More
+| Step | Command | Details |
+| :--- | :--- | :--- |
+| **4️⃣ Install Deps** | `cd ..` then `npm install` | Navigate back to root and install React dependencies. |
+| **5️⃣ Start Frontend** | `npm start` | Launches the React development server. |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> **Frontend runs at: `http://localhost:3000`**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-----
+
+## 🔧 API Structure
+
+The backend exposes several key API routes:
+
+| Route | Purpose | Service Integration |
+| :--- | :--- | :--- |
+| `/api/dashboard` | Fetching data for dashboard widgets. | Data models/Services |
+| `/api/scheduledReports` | Creating/updating/listing report schedules. | `schedulerService` |
+| `/api/pdfExport` | Triggering on-demand PDF report generation. | `pdfExportService` |
+| `/api/scheduler` | General scheduling operations. | `schedulerService` |
+
+### 📅 Report Scheduling Details
+
+Scheduling is handled by `schedulerService.ts` and `schedulerServiceSingleton.ts`, which manage cron expressions, trigger PDF generation, and execute timed tasks.
+
+### 📄 PDF Export Support
+
+The core logic for document creation is in `backend/src/services/pdfExportService.ts`, which generates PDFs from HTML and supports custom templates.
+
+## 📦 Build (Production)
+
+| Component | Command |
+| :--- | :--- |
+| **Frontend Build** | `npm run build` |
+| **Backend Build** | `cd backend` then `npm run build` |
+
+-----
+
+## 🤝 Contributing
+
+Feel free to open issues or Pull Requests. Please adhere to clean commit messages and include clear descriptions for all new features or fixes.
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
