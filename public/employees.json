@@ -1,0 +1,98 @@
+[
+  {
+    "id": "E001",
+    "firstName": "Ravi",
+    "lastName": "Kumar",
+    "jobTitle": "Software Engineer",
+    "department": "Development",
+    "email": "ravi.kumar@example.com",
+    "phone": "+91-9876543210",
+    "location": "Hyderabad",
+    "joiningDate": "2022-03-15",
+    "salary": 75000
+  },
+  {
+    "id": "E002",
+    "firstName": "Sita",
+    "lastName": "Reddy",
+    "jobTitle": "Product Manager",
+    "department": "Product",
+    "email": "sita.reddy@example.com",
+    "phone": "+91-9123456780",
+    "location": "Vijayawada",
+    "joiningDate": "2021-11-10",
+    "salary": 90000
+  },
+  {
+    "id": "E003",
+    "firstName": "Arjun",
+    "lastName": "Nair",
+    "jobTitle": "QA Engineer",
+    "department": "Quality Assurance",
+    "email": "arjun.nair@example.com",
+    "phone": "+91-9988776655",
+    "location": "Visakhapatnam",
+    "joiningDate": "2023-01-05",
+    "salary": 60000
+  },
+  {
+    "id": "E004",
+    "firstName": "Meena",
+    "lastName": "Das",
+    "jobTitle": "UI/UX Designer",
+    "department": "Design",
+    "email": "meena.das@example.com",
+    "phone": "+91-9870012345",
+    "location": "Tirupati",
+    "joiningDate": "2020-08-20",
+    "salary": 70000
+  },
+  {
+    "id": "E005",
+    "firstName": "Krishna",
+    "lastName": "Patel",
+    "jobTitle": "DevOps Engineer",
+    "department": "Development",
+    "email": "krishna.patel@example.com",
+    "phone": "+91-9765432109",
+    "location": "Hyderabad",
+    "joiningDate": "2022-07-12",
+    "salary": 80000
+  },
+  {
+    "id": "E006",
+    "firstName": "Lakshmi",
+    "lastName": "Rao",
+    "jobTitle": "Senior Developer",
+    "department": "Development",
+    "email": "lakshmi.rao@example.com",
+    "phone": "+91-9654321098",
+    "location": "Vijayawada",
+    "joiningDate": "2019-05-18",
+    "salary": 95000
+  },
+  {
+    "id": "E007",
+    "firstName": "Vijay",
+    "lastName": "Singh",
+    "jobTitle": "Marketing Manager",
+    "department": "Marketing",
+    "email": "vijay.singh@example.com",
+    "phone": "+91-9543210987",
+    "location": "Hyderabad",
+    "joiningDate": "2021-02-25",
+    "salary": 85000
+  },
+  {
+    "id": "E008",
+    "firstName": "Priya",
+    "lastName": "Sharma",
+    "jobTitle": "HR Manager",
+    "department": "Human Resources",
+    "email": "priya.sharma@example.com",
+    "phone": "+91-9432109876",
+    "location": "Visakhapatnam",
+    "joiningDate": "2020-09-14",
+    "salary": 78000
+  }
+]
